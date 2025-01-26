@@ -14,6 +14,7 @@ const app = express();                              // CONFIGURE EXPRESS APP
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => { res.send("API Working") });
 app.use('/user', userRouter);
 app.use('/entry', entryRouter);
 
