@@ -11,10 +11,5 @@
             "src": "/(.*)",
             "dest": "dist/index.js"
         }
-    ],
-    "scripts": {
-        "build": "npm install",
-        "start": "node dist/index.js",
-        "dev": "npx nodemon"
-    }
+    ]
 }
