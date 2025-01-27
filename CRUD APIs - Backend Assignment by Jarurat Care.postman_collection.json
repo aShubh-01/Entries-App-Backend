@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "0b56661e-b037-42ba-a72a-415bae72def0",
+		"name": "CRUD APIs - Backend Assignment by Jarurat Care",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34448969"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"user\",\n    \"email\": \"testuser@gmail.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"email\": \"testadmin@gmail.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/admin-signup"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"testuser@gmail.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://entries-app-backend.vercel.app/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Entry",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzk3NmZmNjIxZjA1MGEwNjcxZTM4NTIiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzc5Nzc4NDZ9.modtDl7vwcpqKOXJjgiYVc6WnqU18lWg3mP0Ni24-h0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Some random entry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://entries-app-backend.vercel.app//entry/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Entry",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzk2OTIzYjFiY2NkYWZjZTMzNGNiMWQiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzc5MjE4Mjd9.PPQy9JnkdRXapMMAxmY3pjyKRbwd5tjJgh8gGK6ZyZk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newName\": \"updated entry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://entries-app-backend.vercel.app/entry/update/67977063425873686e21d59e"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Entry",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzk3NmZmNjIxZjA1MGEwNjcxZTM4NTIiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzc5NzgwNTV9.1lJEfiF3pdT9i2Kl4TgJdtr8SMbz2zOY7g-MBQfWXYs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"newName\": \"updated entry\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://entries-app-backend.vercel.app/entry/delete/67977063425873686e21d59e"
+			},
+			"response": []
+		},
+		{
+			"name": "Check app health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://entries-app-backend.vercel.app/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get entries",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzk3NmZmNjIxZjA1MGEwNjcxZTM4NTIiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzc5NzgwNTV9.1lJEfiF3pdT9i2Kl4TgJdtr8SMbz2zOY7g-MBQfWXYs",
+						"type": "text"
+					}
+				],
+				"url": "https://entries-app-backend.vercel.app/entry/all"
+			},
+			"response": []
+		},
+		{
+			"name": "Get entry byId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Nzk3NmZmNjIxZjA1MGEwNjcxZTM4NTIiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3Mzc5NzgwNTV9.1lJEfiF3pdT9i2Kl4TgJdtr8SMbz2zOY7g-MBQfWXYs",
+						"type": "text"
+					}
+				],
+				"url": "https://entries-app-backend.vercel.app/entry/byId/6797714e277e5982a6cde5e5"
+			},
+			"response": []
+		}
+	]
+}
