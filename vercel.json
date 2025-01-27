@@ -2,6 +2,6 @@
     "version": 2,
     "rewrites": [{ 
         "source": "/(.*)",
-        "destination": "/dist/database.js"
+        "destination": "/dist"
     }]
 }
