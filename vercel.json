@@ -1,5 +1,20 @@
 {
     "version": 2,
-    "builds": [{"src": "./dist/index.js", "use": "@vercel/node"}],
-    "rewrites": [{"source": "/(.*)", "destination": "/"}]
+    "builds": [
+        { 
+            "src": "dist/index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "dist/index.js"
+        }
+    ],
+    "scripts": {
+        "build": "npm install",
+        "start": "node dist/index.js",
+        "dev": "npx nodemon"
+    }
 }
